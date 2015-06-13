@@ -112,11 +112,16 @@ def get_area():
     areanum = str(raw_input("请输入需要查询的区代码,可一次输入多个代码："))
     if str(0) in areanum:#输入有0则计算全部区域
         for numbe in ('1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k'):
+            print "您输入的区域为：上海所有区域"
             get_price(numbe)
     else:#输入无0则计算输入区域
+        output = "您输入的区域为："
         for numb in ('0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k'):
             if str(numb) in areanum:
-                print numb
+                output = output+str(area[numb])+" "
+        print output
+        for numb in ('0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k'):
+            if str(numb) in areanum:
                 get_price(numb)
 
 get_area()
