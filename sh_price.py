@@ -108,6 +108,7 @@ def get_price(numb):
         print (area[numb]+u"共获取二手房数量："+str(i)+u"，平均房价为："+str(round(float(sum_pric)/float(i),2))+u"万元每平方")
     else:
         print u"获取失败！请使用浏览器检查%s是否能正常显示！" % num_area[numb]
+        print urltx
 
 #获取输入区域
 def get_area():
